@@ -43,6 +43,6 @@ public class Ground : MonoBehaviour
 
     public void DestroyItself()
     {
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 1f);
     }
 }

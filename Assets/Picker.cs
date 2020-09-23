@@ -7,6 +7,7 @@ public class Picker : MonoBehaviour
     public static Picker instance;
     float speed = 3f;
     Rigidbody pickerBody;
+    public Camera pickerCamera;
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,6 +38,14 @@ public class Picker : MonoBehaviour
         if (other.gameObject.tag == "Stopper")
         {
             Stop();
+        }
+        if (other.gameObject.tag=="Tunnel")
+        {
+            StartCoroutine(pickerCamera.GetComponent<CameraController>().MoveCamera());
+            GameManager.instance.CreatePlatforms();
+           
+            other.gameObject.tag = "Untagged";
+            Destroy(other.gameObject, 2f);
         }
     }
 
