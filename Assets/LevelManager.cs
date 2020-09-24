@@ -15,8 +15,8 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         instance = this;
-       
-        
+
+     
 
     }
 
@@ -44,13 +44,11 @@ public class LevelManager : MonoBehaviour
 
                     Instantiate(spawnObject, new Vector3(posX[rnd], startPosition.y, startPosition.z + offsetZ), Quaternion.identity);
                     offsetZ += 0.5f;
-                    Debug.Log("abc" +offsetZ);
                 }
 
             }
             
             offsetZ += 12f;
-            Debug.Log("dc" + offsetZ);
         }
 
 
