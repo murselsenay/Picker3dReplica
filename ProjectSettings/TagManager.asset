@@ -8,6 +8,10 @@ TagManager:
   - Sphere
   - PickerChecker
   - Tunnel
+  - ProgressBarLight
+  - CameraCanvas
+  - DragText
+  - Picker
   layers:
   - Default
   - TransparentFX
